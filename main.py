@@ -29,5 +29,7 @@ def main():
             {"messages": [HumanMessage(content=user_input)]}
         ):
             if "agent" in chunk and  "message" in chunk["agent"]:
-               from message in chunk["agent"]["message"]
-               print(message, end="")
+               for message in chunk["agent"]["message"]:
+                print(message, end="")
+if __name__ == "__main__":
+    main()
